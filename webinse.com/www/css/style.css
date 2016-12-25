@@ -1,0 +1,41 @@
+@font-face {
+    font-family: LANENAR;
+    src: url("fonts/LANENAR.ttf");
+}
+
+body {
+	background: #f4f6f7 !important;
+	height: 100%; 
+}
+
+.all {
+	margin-top: 3%;
+	font-family: calibri, sans-serif;
+	font-weight: 800;
+}
+
+.a  {
+	margin-top: 3%;
+	padding: 5% 0;
+	background: #5d83aa;
+	border-radius: 10px;
+	color: #f4f6f7;
+}
+
+.form-group {
+    margin-bottom: 0 !important;
+}
+
+.form-control {
+	background: #fff !important;
+	border-radius: 7px !important;
+	color: #19334f !important;
+}
+
+.form-control:hover {
+	background: #f4f6f7 !important;
+}
+
+.btn {
+	color:  #19334f !important;
+}
