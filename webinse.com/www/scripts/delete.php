@@ -1,4 +1,5 @@
 <?php
+//* http://php.net/manual/ru/function.mysqli-connect.php
 $link = new mysqli("127.0.0.1", "root", "", "people");
 
 if ($link->connect_errno) {

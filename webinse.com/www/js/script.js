@@ -1,4 +1,4 @@
-/*--- database manipulations ---*/
+// actions with database
 function PostData (place,posButton) {
 	var firstname = place.children().children('.field-fname').children('#firstname').val();   
 	var lastname = place.children().children('.field-lname').children('#lastname').val();
@@ -69,9 +69,6 @@ function ChangeData (place,posButton){
 	});
 }
 
-
-
-/*--- validation ---*/
 function checkValidation(place,n){
 	var f = true;
 	var fname = place.children().children('.field-fname').children('#firstname').val();
@@ -104,20 +101,17 @@ function checkValidation(place,n){
 	if (f) {
 		return ('true');
 	} else  if (fError) {
-		$('.all').prepend('<div class="alert alert-danger alert-dismissible"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Something goes wrong...</strong> Maybe You hide something?</div>'); 
+		$('.all').prepend('<div class="alert alert-danger alert-dismissible"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Please fill all fields to continue...</div>'); 
 		fError = false;
 	}
 };
 
 function show(place,field, n){
 	place.children().children('.'+field).attr('class','row '+field+' form-group has-error');
-	place.children().children().children('.bird').attr('class','col-lg-3 col-lg-offset-'+n+' btn btn-danger bird');
+	place.children().children().children('.bird').attr('class','col-md-3 col-md-offset-'+n+' col-xs-12 btn btn-danger bird');
 	place.children().children().children('.bird').attr('style','color: #fff !important; border: 0');
 }
 
-
-
-/*--- onclick-actions ---*/
 $(document).on('click', '#buttonAddDataBaseRow', function (){
 	if (checkValidation($(this).parent().parent().parent(),9)=='true') {
 		PostData($(this).parent().parent().parent(),$(this));
@@ -140,9 +134,6 @@ $(document).on('click', '#buttonChangeDataBaseRow', function (){
 	}
 });
 
-
-
-/*--- loading database on the web-page ---*/
 $(document).ready(function(){
 	var res = new Object;
 	

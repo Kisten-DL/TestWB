@@ -16,18 +16,18 @@
     <body>
         <div class="container">
             <div class="row all">
-                <div class="col-lg-12 a">
+                <div class="col-xs-12 a">
 					<div class="row">
-						<div class="col-lg-10 col-lg-offset-1 tbl">
+						<div class="col-xs-10 col-xs-offset-1 tbl">
 							<div class="row title">
-								<div class="col-lg-3"><h4><strong>First Name:</strong></h4></div>
-								<div class="col-lg-3"><h4><strong>Last Name:</strong></h4></div>
-								<div class="col-lg-3"><h4><strong>E-mail:</strong></h4></div>
-								<div class="col-lg-3 btn-container">
+								<div class="col-md-3 hidden-sm hidden-xs"><h4><strong>First Name:</strong></h4></div>
+								<div class="col-md-3 hidden-sm hidden-xs"><h4><strong>Last Name:</strong></h4></div>
+								<div class="col-md-3 hidden-sm hidden-xs"><h4><strong>E-mail:</strong></h4></div>
+								<div class="col-md-3 col-xs-12 btn-container">
 									<div class="row">
 										<label class="sr-only" for="count">Count:</label>
-										<input type="text" class="col-lg-3 col-lg-offset-4 form-control" id="count" placeholder="1" value="1">
-										<button type="submit" class="col-lg-3 col-lg-offset-2 btn btn-default" id ="countButton">
+										<input type="text" class="col-md-3 col-md-offset-4 col-xs-8 form-control" id="count" placeholder="1" value="1">
+										<button type="submit" class="col-md-3 col-md-offset-2 col-xs-3 col-xs-offset-1 btn btn-default" id ="countButton">
 											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 										</button>
 									</div>

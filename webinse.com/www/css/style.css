@@ -32,10 +32,6 @@ body {
 	color: #19334f !important;
 }
 
-.form-control:focus {
-	background: #f4f6f7 !important;
-}
-
 .form-control:hover {
 	background: #f4f6f7 !important;
 }
