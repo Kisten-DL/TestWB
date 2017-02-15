@@ -3,12 +3,16 @@ function PostData (place,posButton) {
 	var firstname = place.children().children('.field-fname').children('#firstname').val();   
 	var lastname = place.children().children('.field-lname').children('#lastname').val();
 	var email = place.children().children('.field-mail').children('#email').val();
+	var address = place.children().children('.address').children().children('#address').val()
+	var phone = place.children().children('.phone').children().children('#phone').val();
 	$.ajax({
         type: "POST",
         url: "scripts/add.php",
         data: {
 			firstname: firstname,
 			lastname: lastname,
+			address: address,
+			phone: phone,
 			email: email
 		},
 		success: function (result) {
@@ -48,6 +52,8 @@ function ChangeData (place,posButton){
 	var firstname = place.children().children('.field-fname').children('#firstname').val();
 	var lastname = place.children().children('.field-lname').children('#lastname').val();
 	var email = place.children().children('.field-mail').children('#email').val();
+	var address = place.children().children('.address').children().children('#address').val()
+	var phone = place.children().children('.phone').children().children('#phone').val();
 	var id = place.attr('id');
 	$.ajax({
         type: "POST",
@@ -56,6 +62,8 @@ function ChangeData (place,posButton){
 			firstname:firstname,
 			lastname:lastname,
 			email:email,
+			address: address,
+			phone: phone,
 			id:id
 		},
 		success: function (result) {
@@ -113,7 +121,7 @@ function show(place,field, n){
 }
 
 $(document).on('click', '#buttonAddDataBaseRow', function (){
-	if (checkValidation($(this).parent().parent().parent(),9)=='true') {
+	if (checkValidation($(this).parent().parent().parent(),6)=='true') {
 		PostData($(this).parent().parent().parent(),$(this));
 		fError = true;
 		fSuccess = true;
@@ -126,7 +134,7 @@ $(document).on('click', '#buttonDeleteDataBaseRow', function (){
 });
 
 $(document).on('click', '#buttonChangeDataBaseRow', function (){
-	if (checkValidation($(this).parent().parent().parent(),4)=='true'){
+	if (checkValidation($(this).parent().parent().parent(),1)=='true'){
 		ChangeData($(this).parent().parent().parent(),$(this));	
 		fError = true;
 		fSuccess = true;

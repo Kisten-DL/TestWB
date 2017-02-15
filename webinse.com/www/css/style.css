@@ -8,10 +8,18 @@ body {
 	height: 100%; 
 }
 
+.bird{
+	background-color: transparent;
+}
+
 .all {
 	margin-top: 3%;
 	font-family: calibri, sans-serif;
 	font-weight: 800;
+}
+
+.nonactive{
+	display: none;
 }
 
 .a  {
